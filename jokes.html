@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Raam's Jokes</title>
+
+	<style type="text/css">
+
+		h1{
+			font-family: avenir;
+			font-size: 64px;
+			color: orange;
+		}
+
+		#dice{
+			width:200px;
+			height:200px;
+			border: solid black;
+		}
+
+		#mastercontainer{
+			width:640px;
+			height:820px;
+			position:relative;
+			background-color: white;
+		}
+
+		.container{
+			width:40%;
+			height:100%;
+			position:relative;
+			display:inline-block;
+		}
+
+		#container1{
+			top:0%;
+			left:-15%;
+			background-color:white;
+		}
+
+		#container2{
+			top:0%;
+			left:15%;
+			background-color:white;
+		}
+
+
+		.circle{
+			width: 200px;
+			height: 200px;
+			background-color:lightgreen;
+			margin: 1px;
+			border-radius: 50%;
+			position:relative;
+			display:inline-block;
+			transition: ease-in-out 1s;
+		}
+
+		.circle:hover{
+			width: 300px;
+			height: 300px;
+			transition:1s;
+		}
+
+		#one{
+
+		}
+
+
+	</style>
+
+
+</head>
+
+
+<body>
+	<center>
+		<h1>Raam's Jokes</h1>
+	</center>
+
+<audio id="hi" src="Hi.m4a"></audio>
+
+<audio id="amazing" src="Amazing.m4a"></audio>
+
+<audio id="plants" src="PlantInMathClass.m4a"></audio>
+
+<audio id="words" src="Words.m4a"></audio>
+
+<audio id="fainted" src="DoctorFainted.m4a"></audio>
+
+<audio id="jokes" src="Funnyjokes.m4a"></audio>
+
+<center> 
+
+	<div id="dice"></div>
+
+	<div id="mastercontainer">
+		<div id="container1" class="container">
+			<div id="one" class="circle"></div>
+			<div id="two" class="circle"></div>
+			<div id="three" class="circle"></div>
+		</div> 
+
+		<div id="container2" class="container">
+			<div id="four" class="circle"></div>
+			<div id="five" class="circle"></div>
+			<div id="six" class="circle"></div>
+		</div>
+	</div> 
+
+</center>
+
+<script type="text/javascript">
+
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+let four = document.getElementById("four");
+let five = document.getElementById("five");
+let six = document.getElementById("six");
+
+	one.addEventListener(
+		"click", function(){
+			console.log("Hello, Raam");
+			hi.play();
+		}
+		)
+
+	two.addEventListener(
+		"click", function(){
+			console.log("You're amazing!");
+			amazing.play();
+		}
+		)
+
+	three.addEventListener(
+		"click", function(){
+			console.log("What happened to the plant in math class?");
+			plants.play();
+		}
+		)
+
+	four.addEventListener(
+		"click", function(){
+			console.log("You know what they say?");
+			words.play();
+		}
+		)
+
+	five.addEventListener(
+		"click", function(){
+			console.log("Mary had a little lamb. The doctor fainted");
+			fainted.play();
+		}
+		)
+
+	six.addEventListener(
+		"click", function(){
+			console.log("What's funny?");
+			jokes.play();
+		}
+		)
+
+
+</script>
+
+</body>
+
+
+</html>
