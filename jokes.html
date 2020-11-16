@@ -63,8 +63,11 @@
 			transition:1s;
 		}
 
-		#one{
 
+		h2{
+			font-size: 64px;
+			font-family:avenir;
+			font-color:blue;
 		}
 
 
@@ -93,19 +96,22 @@
 
 <center> 
 
-	<div id="dice"></div>
+
+	<button onclick="document.getElementById('number').innerHTML = getRndInteger(0,6)">Roll the Dice!</button>
+
+	<h1 id="number"></h1>
 
 	<div id="mastercontainer">
 		<div id="container1" class="container">
-			<div id="one" class="circle">1</div>
-			<div id="two" class="circle">2</div>
-			<div id="three" class="circle">3</div>
+			<div id="one" class="circle"> <h2> 1 </h2></div>
+			<div id="two" class="circle"><h2> 2 </h2></div>
+			<div id="three" class="circle"><h2> 3 </h2></div>
 		</div> 
 
 		<div id="container2" class="container">
-			<div id="four" class="circle">4</div>
-			<div id="five" class="circle">5</div>
-			<div id="six" class="circle">6</div>
+			<div id="four" class="circle"><h2> 4 </h2></div>
+			<div id="five" class="circle"><h2> 5 </h2></div>
+			<div id="six" class="circle"><h2> 6 </h2></div>
 		</div>
 	</div> 
 
@@ -119,6 +125,7 @@ let three = document.getElementById("three");
 let four = document.getElementById("four");
 let five = document.getElementById("five");
 let six = document.getElementById("six");
+let dice = document.getElementById("dice");
 
 	one.addEventListener(
 		"click", function(){
@@ -162,6 +169,10 @@ let six = document.getElementById("six");
 		}
 		)
 
+	function getRndInteger(min, max){
+		return Math.floor(Math.random() * (max - min)) + min + 1;
+	}
+	
 
 </script>
 
