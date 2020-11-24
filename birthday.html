@@ -3,29 +3,84 @@
 <head>
 	<style type="text/css">
 		
-		h1{
+		.letter{
 			font-family: avenir;
-			font-color: black;
-			font-size:100px;
+			color: black;
+			opacity:0;
+			font-size:26px;
+			position:absolute;
 		}
 
 	</style>
 </head>
 <body>
 
+<p> Directions: Find all the letters of Happy Birthday - they're 13 of them... </p>
 
-<h1 id="H1"> H </h1>
+<div class="letter"><h1> H </h1></div>
+<div class="letter"><h1> A </h1></div>
+<div class="letter"><h1> P </h1></div>
+<div class="letter"><h1> P </h1></div>
+<div class="letter"><h1> Y </h1></div>
 
+<div class="letter"><h1> B </h1></div>
+<div class="letter"><h1> I </h1></div>
+<div class="letter"><h1> R </h1></div>
+<div class="letter"><h1> T </h1></div>
+<div class="letter"><h1> H </h1></div>
+<div class="letter"><h1> D </h1></div>
+<div class="letter"><h1> A </h1></div>
+<div class="letter"><h1> Y </h1></div>
+
+<audio id="HappyBirthday" src="HappyBirthday.mp3"></audio>
 
 <script type="text/javascript">
 
-let H1 = document.getElementById('H1');
+let letter = document.getElementsByClassName('letter');
+let divs = Array.from(letter)
+let counter = 0;
+let song = document.getElementById('HappyBirthday')
 
-	function position(){
+function position (){
+	divs.forEach(
+		function (bday) {
+			bday.style.left = Math.random() * 1039 + "px";
+			bday.style.top = Math.random() * 650 + "px";
 
-		H1.style.top = Math.random()*800 + "px";
-		H1.style.left = Math.random()*800 + "px";
-	}
+
+		bday.addEventListener(
+			"click", function(){
+				bday.style.opacity = "1";
+				counter = counter + 1;
+				console.log(counter);
+				if (counter == 16) {song.play()}
+			})
+
+
+		// H1.style.opacity="1";
+	})
+	};
+
+position();
+
+// function position(){
+
+// 	H1.style.top = Math.random()*60 + "%";
+// 	H1.style.left = Math.random()*90 + "%";
+// 	}
+
+// 	position();
+
+// document.addEventListener(
+// 	"click", function(){
+// 		divs.forEach(
+// 			function(element){
+// 				element.style.opacity = "1";
+// 			})
+
+// 		// H1.style.opacity="1";
+// 	})
+
 </script>
 
 </body>
