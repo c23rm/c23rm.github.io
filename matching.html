@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bad+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+	
+	<style type="text/css">
+		
+		body{
+			background-color:orange;
+		}
+
+		.box{
+			height:130px;
+			width:130px;
+			background-color: lightblue;
+			border: 0px solid black;
+			margin:5px;
+			position:relative;
+			display:inline-block;
+			top:5px;
+		}
+
+		h2{
+			font-family: 'Annie Use Your Telescope', cursive;
+			color:white;
+			font-size:28px;
+			text-decoration:none;
+
+		}
+
+		p{
+			font-family: 'Shadows Into Light', cursive;
+			color: rgb(60, 60, 60);
+			font-size:21px;
+		}
+
+		/*#matchingsquare{
+			height: 600px;
+			width: 600px;
+			border:1px solid black;
+		}
+*/
+
+	</style>
+
+</head>
+
+<body>
+
+	<center>
+		<h2>The Matching Game!</h2>
+		<p>Find all of the matching boxes as quickly as possible. Have fun!</p>
+	</center>
+
+	<script type="text/javascript">
+
+		let colors = ["red", "orange", "yellow", "green", "blue", "violet", "pink", "white"];
+
+
+		function makeSquares(){
+			let square = document.createElement('div');
+			document.body.appendChild(square);
+			square.classList.add('box');
+
+			function setColor (){
+				square.style.backgroundColor = colors[1];
+				console.log(colors[1]);
+		};
+
+		square.addEventListener("click", setColor)
+
+		}
+		
+		for (let i=0; i<16; i=i+1){makeSquares()};
+
+	</script>
+
+<!-- How do we randomly assign a number or a letter to the 16 squares, so that each of the 8 colors appears exactly twice? -->
+
+
+</body>
+</html>
