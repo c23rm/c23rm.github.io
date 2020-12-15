@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+			
+	<style type="text/css">
+		#box{
+			width:100px;
+			height:100px;
+			position:absolute;
+			background-color:lightblue;
+			animation-duration:2s;
+			animation-iteration-count: 1;
+			animation-name:;
+		}
+
+		@keyframes red{
+			0%{background-color:lightblue;}
+			50%{background-color:red;}
+			100%{background-color:lightblue;}
+		}
+
+		@keyframes orange{
+			0%{background-color:lightblue;}
+			50%{background-color:orange;}
+			100%{background-color:lightblue;}
+		}
+
+		@keyframes yellow{
+			0%{background-color:lightblue;}
+			50%{background-color:yellow;}
+			100%{background-color:lightblue;}
+		}
+
+		@keyframes green{
+			0%{background-color:lightblue;}
+			50%{background-color:green;}
+			100%{background-color:lightblue;}
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="box"></div>
+
+	<script type="text/javascript">
+		
+		let square = document.getElementById('box');
+
+		let numbers = ['x', 'red', 'orange', 'yellow', 'green'];
+
+		square.addEventListener(
+			"click", function(){
+				let random = Math.ceil(Math.random * 4);
+				square.style.animationName = numbers[random];
+				setTimeout(function(){square.style.animationName=''}, 1000)
+				console.log(numbers);
+			}
+			);
+
+	</script>
+
+</body>
+</html>
