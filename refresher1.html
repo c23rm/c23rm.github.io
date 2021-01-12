@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+	<title>H20 for Life: Water Guardians!</title>
+
+	<style type="text/css">
+		body{
+			background-color:rgb(144, 215, 228);
+		}
+
+		h1{
+			font-family: 'East Sea Dokdo', cursive;
+			color:rgb(0, 97, 114);
+			font-size:36px;
+		}
+
+		/*a{
+			text-decoration-color: blue;
+		}*/
+
+		a:link, a:visited {
+  			color:rgb(0, 97, 114);
+  			background-color: transparent;
+  			text-decoration: none;
+  			transition: 0.5s;
+			}
+
+		a:hover, a:active {
+		  	color:rgb(0, 124, 156);
+		  	background-color: transparent;
+		  	text-decoration: none;
+		  	transition: 0.5s;
+		}
+
+
+		p{
+			font-family: 'Yeon Sung', cursive;
+			color:yellow;
+			font-size:21px;
+		}
+
+		.square{
+			width:250px;
+			height:135px;
+			/*top:13px;
+			left:217px;*/
+			position:relative;
+			/*background-color:lightgreen;*/
+			margin:10px;
+			background-image:url(https://www.h2oforlifeschools.org/assets/curriculum/water-guardians-9e14294141ed01c39d86fbfe3812510ec8b91fbe9958defa37f54ea89ec2f8e6.svg);
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-position:center;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Want to know more about H20 for Life? Check out <a href="https://www.h2oforlife.org/">this website</a>!</h1>
+
+	<center><div id="skye" class="square"></div></center>
+
+	<p>They have a special program called Water Guardians, encouraging young people to take action on the issue of clean water. Check 'em out <a href="https://waterguardians.org/">here!</a></p>
+
+	<p>Here's an excerpt from the Water Guardians home page: "Water Guardians is a new and exciting educational program brought to you by H2O for Life. It teaches students about the global water crisis and how we can create change locally, together. The program culminates in a service-learning component that will help engage students to become global citizens." It is created for 5th-8th grade students, and teachers can use it to create lesson plans and encourage students!</p>
+
+	<script type="text/javascript">
+		
+		let logo = document.getElementById("skye")
+
+		document.addEventListener("click", 
+			function (event){
+				console.log(event.clientX, event.clientY);
+				logo.style.position = "absolute";
+				logo.style.left = event.clientX-125 + "px";
+				logo.style.top = event.clientY-77.5 + "px";
+			})
+
+		// logo.addEventListener("click", 
+		// 	function spin (){
+		// 		logo.style.transform = "rotate(720deg";
+		// 	})
+
+	</script>
+
+</body>
+</html>
