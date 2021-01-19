@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+	<title>Favorite Foods!</title>
+
+	<style type="text/css">
+
+		body{
+			background-color:rgb(255, 241, 204);
+		}
+		
+		#plate{
+			font-family: 'Righteous', cursive;
+			font-size:24px;
+			background-image:url(plate.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			width:400px;
+			height:400px;
+			padding-top:180px;
+			text-align:center;
+		}
+
+		h1{
+			font-family: 'Righteous', cursive;
+		}
+
+		p{
+			font-family: 'Righteous', cursive;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<center><h1>Favorite Foods!</h1></center>
+
+	<center><p>Click below to see my favorite foods (or ones that I was thinking of when coding this ;).</p></center>
+
+	<center><div id="plate"></div></center>
+
+	<script type="text/javascript">
+		
+		let food = ["falaffel", "oat milk", "almond milk", "kitchari", "dhal", "rice", "scallion pancakes", "mushrooms", "pizza", "Hui"]
+
+		let plate = document.getElementById("plate");
+
+		plate.addEventListener(
+			"click", function(){
+				let happy = Math.floor(Math.random()*10); 
+				plate.innerText = food[happy];
+				console.log(happy);
+			}
+			)
+
+
+	</script>
+
+</body>
+</html>

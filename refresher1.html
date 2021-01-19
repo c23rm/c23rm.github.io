@@ -20,10 +20,6 @@
 			font-size:36px;
 		}
 
-		/*a{
-			text-decoration-color: blue;
-		}*/
-
 		a:link, a:visited {
   			color:rgb(0, 97, 114);
   			background-color: transparent;
@@ -46,17 +42,15 @@
 		}
 
 		.square{
-			width:250px;
-			height:135px;
-			/*top:13px;
-			left:217px;*/
-			position:relative;
-			/*background-color:lightgreen;*/
-			margin:10px;
+			width:125px;
+			height:67.5px;
+			/*background-color:rgb(144,215,228);*/
+			position: relative;
+			display:inline-block;
+			margin:15px;
 			background-image:url(https://www.h2oforlifeschools.org/assets/curriculum/water-guardians-9e14294141ed01c39d86fbfe3812510ec8b91fbe9958defa37f54ea89ec2f8e6.svg);
 			background-size:contain;
 			background-repeat:no-repeat;
-			background-position:center;
 		}
 
 	</style>
@@ -65,7 +59,7 @@
 
 	<h1>Want to know more about H20 for Life? Check out <a href="https://www.h2oforlife.org/">this website</a>!</h1>
 
-	<center><div id="skye" class="square"></div></center>
+	<!-- <center><div id="skye" class="square"></div></center> -->
 
 	<p>They have a special program called Water Guardians, encouraging young people to take action on the issue of clean water. Check 'em out <a href="https://waterguardians.org/">here!</a></p>
 
@@ -73,15 +67,26 @@
 
 	<script type="text/javascript">
 		
-		let logo = document.getElementById("skye")
+		// let logo = document.getElementById("skye")
 
-		document.addEventListener("click", 
+		function makeLogo (){
+			let water = document.createElement('div');
+			document.body.appendChild(water);
+			water.classList.add('square');
+			// water.style.left = 1+Math.random()*1000 + "px";
+			// water.style.top = 400+Math.random()*1000 + "px";
+
+			document.addEventListener("click", 
 			function (event){
 				console.log(event.clientX, event.clientY);
-				logo.style.position = "absolute";
-				logo.style.left = event.clientX-125 + "px";
-				logo.style.top = event.clientY-77.5 + "px";
+				water.style.left = event.clientX-630 + "px";
+				water.style.top = event.clientY-350 + "px";
 			})
+		}
+
+		for (let i=0;i<1000; i=i+1){
+			makeLogo();
+		}
 
 		// logo.addEventListener("click", 
 		// 	function spin (){
