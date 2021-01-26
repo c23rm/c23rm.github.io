@@ -1,24 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 	<title>Screen Time</title>
+
+	<style type="text/css">
+		
+		.bubble{
+			border-radius: 50%;
+			position:absolute;
+			border: 0.001px white solid;
+		}
+
+	</style>
 </head>
 <body>
 
 	<script type="text/javascript">
-		
-		let data = [
-			[3, 6, 9],
-			[4, 14, 3],
-			[5, 2, 7]
-		]
 
-		data.forEach(
-			function circles (){
+		let one = [96, 119, 110, 71, 143, 69, 147]
+		let two = [161, 88, 61, 102, 105, 108, 94]
+		let three = [117, 100, 115, 85, 140, 177, 72]
 
+		function circles (element){
+				let circle = document.createElement('div');
+				document.body.appendChild(circle);
+				circle.style.height = element*2 + "px";
+				circle.style.width = element*2 + "px";
+				circle.classList.add('bubble');
+				circle.style.top = Math.random()*65 + "%";
+				circle.style.left = Math.random()*79 + "%";
 
+				if (element > 10, element <= 75) {
+					circle.style.backgroundColor = 'orange';
+				}
+
+				else if (element > 75, element <= 90){
+					circle.style.backgroundColor = 'yellow';
+				}
+
+				else if (element > 90, element <= 105){
+					circle.style.backgroundColor = 'lightGreen';
+				}
+
+				else if (element > 105, element <= 125){
+					circle.style.backgroundColor = 'green';
+				}
+
+				else if (element > 125, element <= 150){
+					circle.style.backgroundColor = 'lightBlue';
+				}
+
+				else if (element > 150){
+					circle.style.backgroundColor = 'blue';
+				}
+
+				// "click", function(){
+				// 	circle.innerHTML = element;
+				// }
 		}
-			)
+
+		one.forEach(circles);
+		two.forEach(circles);
+		three.forEach(circles);
 
 	</script>
 
