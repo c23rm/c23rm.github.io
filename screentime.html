@@ -4,67 +4,141 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
+	<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bad+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+
 	<title>Screen Time</title>
 
 	<style type="text/css">
+
+		body{
+			background-color:darkblue;
+		}
 		
 		.bubble{
 			border-radius: 50%;
 			position:absolute;
-			border: 0.001px white solid;
+			border: 0.001px black solid;
+		}
+
+		table{
+			width:100%;
+			table-layout: fixed;
+			height:;
+		}
+
+		td{
+			border: 0px solid black;
+			width: 1/5;
+			text-align: center;
+		}
+
+		#container{
+			background-color: black;
+		}
+
+		#s0-85{
+			background-color: #f0a150;
+		}
+
+		#s86-105{
+			background-color: #f09537;
+		}
+
+		#s106-125{
+			background-color: #f48020;
+		}
+
+		#s126-145{
+			background-color: #f0750f;
+			color:white;
+		}
+
+		#s146more{
+			background-color: #c76706;
+			color:white;
+		}
+
+		p{
+			font-family: 'Shadows Into Light', cursive;
+			font-size:21px;
+			position: relative;
+		}
+
+		h2{
+			font-family: 'Annie Use Your Telescope', cursive;
+			font-size:32px;
+		}
+
+		.white{
+			color: white;
 		}
 
 	</style>
 </head>
 <body>
 
+<center><h2 class="white">Data Collection Codesketch: Screen Time</h2></center>
+
+<p class="white">Hey all! Below are bubbles for my daily screen time usage from January 3rd to January 31st. Each bubble represents a day and, the bigger the bubble, the more time I spent on my phone. Also, more minutes spent on my phone equates to a darker color of orange. For more on this, check out the key referenced below (all values are in minutes). I think I spent more time on my phone in January than average. I had a lot going on and felt overwhelmed at times.</p>
+
+<center>
+	<div id="container">
+	<table>
+		<tr>
+			<td id="s0-85"><center><p>0-85</p></center></td>
+			<td id="s86-105"><center><p>86-105</p></center></td>
+			<td id="s106-125"><center><p>106-125</p></center></td>
+			<td id="s126-145"><center><p>126-145</p></center></td>
+			<td id="s146more"><center><p>146+</p></center></td>
+		</tr>
+	</table>
+	</div>
+</center>
+
 	<script type="text/javascript">
 
 		let one = [96, 119, 110, 71, 143, 69, 147]
 		let two = [161, 88, 61, 102, 105, 108, 94]
 		let three = [117, 100, 115, 85, 140, 177, 72]
+		let four = [130, 100, 81, 73, 141, 102, 180]
+		let five = [42]
 
 		function circles (element){
 				let circle = document.createElement('div');
 				document.body.appendChild(circle);
-				circle.style.height = element*2 + "px";
-				circle.style.width = element*2 + "px";
+				circle.style.height = element*1.3 + "px";
+				circle.style.width = element*1.3 + "px";
 				circle.classList.add('bubble');
-				circle.style.top = Math.random()*65 + "%";
-				circle.style.left = Math.random()*79 + "%";
+				circle.style.top = Math.random()*180 + 315 + "px";
+				circle.style.left = Math.random()*1050 + "px";
 
-				if (element > 10, element <= 75) {
-					circle.style.backgroundColor = 'orange';
+				if (element > 0, element <= 85) {
+					circle.style.backgroundColor = '#f0a150';
 				}
 
-				else if (element > 75, element <= 90){
-					circle.style.backgroundColor = 'yellow';
-				}
-
-				else if (element > 90, element <= 105){
-					circle.style.backgroundColor = 'lightGreen';
+				else if (element > 85, element <= 105){
+					circle.style.backgroundColor = '#f09537';
 				}
 
 				else if (element > 105, element <= 125){
-					circle.style.backgroundColor = 'green';
+					circle.style.backgroundColor = '#f48020';
 				}
 
-				else if (element > 125, element <= 150){
-					circle.style.backgroundColor = 'lightBlue';
+				else if (element > 125, element <= 145){
+					circle.style.backgroundColor = '#f0750f';
 				}
 
-				else if (element > 150){
-					circle.style.backgroundColor = 'blue';
+				else if (element > 145){
+					circle.style.backgroundColor = '#c76706';
 				}
 
-				// "click", function(){
-				// 	circle.innerHTML = element;
-				// }
 		}
 
 		one.forEach(circles);
 		two.forEach(circles);
 		three.forEach(circles);
+		four.forEach(circles);
+		five.forEach(circles);
 
 	</script>
 
