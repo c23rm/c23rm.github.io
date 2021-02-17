@@ -7,10 +7,22 @@
 	<title>Matching Game: Color Animation!</title>
 			
 	<style type="text/css">
-		#box{
+		#a{
 			width:100px;
 			height:100px;
 			position:absolute;
+			left:1%;
+			background-color:lightblue;
+			animation-duration:2s;
+			animation-iteration-count: 1;
+			animation-name:;
+		}
+
+		#b{
+			width:100px;
+			height:100px;
+			position:absolute;
+			left:20%;
 			background-color:lightblue;
 			animation-duration:2s;
 			animation-iteration-count: 1;
@@ -45,20 +57,36 @@
 </head>
 <body>
 
-	<div id="box"></div>
+	<div id="a"></div>
+	<div id="b"></div>
 
 	<script type="text/javascript">
 		
-		let square = document.getElementById('box');
+		let squarea = document.getElementById('a');
+		let squareb = document.getElementById('b');
 
 		let numbers = ['red', 'orange', 'yellow', 'green'];
 
-		square.addEventListener(
+		let random1 = Math.floor(Math.random() * 4);
+
+		squarea.addEventListener(
 			"click", function(){
-				let random = Math.floor(Math.random() * 4);
+				let color = random;
 				console.log(random);
-				square.style.animationName = numbers[random];
-				console.log(numbers[random]);
+				square.style.animationName = numbers[color];
+				square.classList.add(color);
+				console.log(numbers[color]);
+				setTimeout(function(){square.style.animationName=''}, 2000)
+			}
+			);
+
+		squareb.addEventListener(
+			"click", function(){
+				let color = random;
+				console.log(random);
+				square.style.animationName = numbers[color];
+				square.classList.add(color);
+				console.log(numbers[color]);
 				setTimeout(function(){square.style.animationName=''}, 2000)
 			}
 			);

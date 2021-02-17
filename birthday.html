@@ -4,23 +4,43 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
+	<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bad+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 	<title>Birthday Search!</title>
 	
 	<style type="text/css">
+
+		body{
+			background-color:yellow;
+		}
 		
 		.letter{
 			font-family: avenir;
-			color: black;
-			opacity:0;
+			color: navy;
+			opacity:0.02;
 			font-size:26px;
 			position:absolute;
+			cursor:none;
+		}
+
+		p{
+			font-family: 'Shadows Into Light', cursive;
+			font-size:21px;
+			position: relative;
+			color:navy;
+		}
+
+		h1{
+			font-family: 'Shadows Into Light', cursive;
+			font-size:32px;
+			color:navy;
 		}
 
 	</style>
 </head>
 <body>
 
-<p> Directions: Find all the letters of Happy Birthday - they're 13 of them... </p>
+<p>Can you find all 13 letters of Happy Birthday? They're all somewhere on this screen!</p>
 
 <div class="letter"><h1> H </h1></div>
 <div class="letter"><h1> A </h1></div>
@@ -60,31 +80,10 @@ function position (){
 				console.log(counter);
 				if (counter == 16) {song.play()}
 			})
-
-
-		// H1.style.opacity="1";
 	})
 	};
 
 position();
-
-// function position(){
-
-// 	H1.style.top = Math.random()*60 + "%";
-// 	H1.style.left = Math.random()*90 + "%";
-// 	}
-
-// 	position();
-
-// document.addEventListener(
-// 	"click", function(){
-// 		divs.forEach(
-// 			function(element){
-// 				element.style.opacity = "1";
-// 			})
-
-// 		// H1.style.opacity="1";
-// 	})
 
 </script>
 
