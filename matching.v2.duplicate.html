@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bad+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+
+	<title>Matching Game: Color Animation!</title>
+			
+	<style type="text/css">
+		body{
+			background-color: #FDC4F1;
+		}
+
+		#box{
+			width:300px;
+			height:300px;
+			position:relative;
+			display:inline-block;
+			background-color:white;
+			animation-duration:2s;
+			animation-iteration-count: 1;
+			animation-name:;
+		}
+
+		#boxb{
+			width:300px;
+			height:300px;
+			position:relative;
+			display:inline-block;
+			background-color:white;
+			animation-duration:2s;
+			animation-iteration-count: 1;
+			animation-name:;
+		}
+
+		#boxc{
+			width:300px;
+			height:300px;
+			position:relative;
+			display:inline-block;
+			background-color:white;
+			animation-duration:2s;
+			animation-iteration-count: 1;
+			animation-name:;
+		}
+
+		#boxd{
+			width:300px;
+			height:300px;
+			position:relative;
+			display:inline-block;
+			background-color:white;
+			animation-duration:2s;
+			animation-iteration-count: 1;
+			animation-name:;
+		}
+
+		@keyframes red{
+			0%{background-color:white;}
+			50%{background-color:red;}
+			100%{background-color:white;}
+		}
+
+		@keyframes orange{
+			0%{background-color:white;}
+			50%{background-color:orange;}
+			100%{background-color:white;}
+		}
+
+		@keyframes yellow{
+			0%{background-color:white;}
+			50%{background-color:yellow;}
+			100%{background-color:white;}
+		}
+
+		@keyframes green{
+			0%{background-color:white;}
+			50%{background-color:green;}
+			100%{background-color:white;}
+		}
+
+		p{
+			font-family: 'Shadows Into Light', cursive;
+			font-size:21px;
+			position: relative;
+			color:purple;
+		}
+
+		h2{
+			font-family: 'Annie Use Your Telescope', cursive;
+			font-size:32px;
+			color:purple;
+		}
+	</style>
+
+</head>
+<body>
+
+	<center><h2>Matching Game: Stick-With-It Colors</h2></center>
+
+	<center><p>Hey all! Here is a second installment of the matching game. Now each square will only have one color animation associated with it. So if the first square has a green animation on the first click, it will hopefully have a green animation on the 100th click.</p></center>
+
+	<br><br>
+
+	<center><div id="mastercontainer">
+		<div id="box"></div>
+		<div id="boxb"></div>
+		<div id="boxc"></div>
+		<div id="boxd"></div>
+	</div></center>
+
+	<script type="text/javascript">
+		
+		let square = document.getElementById('box');
+		let squareb = document.getElementById('boxb');
+		let squarec = document.getElementById('boxc');
+		let squared = document.getElementById('boxd');
+
+		let numbers = ['red', 'orange', 'yellow', 'green'];
+
+		let random = Math.floor(Math.random() * 4);
+
+		square.addEventListener(
+			"click", function(){
+				console.log(random);
+				square.style.animationName = numbers[random];
+				console.log(numbers[random]);
+				setTimeout(function(){square.style.animationName=''}, 2000)
+			}
+			);
+
+		let randomb = Math.floor(Math.random() * 4);
+
+		squareb.addEventListener(
+			"click", function(){
+				console.log(randomb);
+				squareb.style.animationName = numbers[randomb];
+				console.log(numbers[randomb]);
+				setTimeout(function(){squareb.style.animationName=''}, 2000)
+			}
+			);
+
+		let randomc = Math.floor(Math.random() * 4);
+
+		squarec.addEventListener(
+			"click", function(){
+				console.log(randomc);
+				squarec.style.animationName = numbers[randomc];
+				console.log(numbers[randomc]);
+				setTimeout(function(){squarec.style.animationName=''}, 2000)
+			}
+			);
+
+		let randomd = Math.floor(Math.random() * 4);
+
+		squared.addEventListener(
+			"click", function(){
+				console.log(randomd);
+				squared.style.animationName = numbers[randomd];
+				console.log(numbers[randomd]);
+				setTimeout(function(){squared.style.animationName=''}, 2000)
+			}
+			);
+
+	</script>
+
+</body>
+</html>
